@@ -35,8 +35,9 @@ public class StatsService {
 
     public int avrMinMounth(int[] sales) {
         int i = 0; // заводим счётчик месяцев
-        for (int t : sales) { // цикл "for each" перебирает значения массива "sales"
-            if (t < averageSumm(sales)) { // проверяем меньше ли значение "t" чем среднее значение продаж за все месяцы
+        int avrSum = averageSumm(sales); // высчитываем среднее значение ДО цикла
+        for (int gain : sales) { // цикл "for each" перебирает значения массива "sales"
+            if (gain < avrSum) { // проверяем меньше ли значение "gain" чем среднее значение продаж за все месяцы
                 i++; // увеличиваем счетчик месяцев на 1
             }
         }
@@ -45,8 +46,9 @@ public class StatsService {
 
     public int avrMaxMounth(int[] sales) {
         int i = 0; // заводим счётчик месяцев
-        for (int t : sales) { // цикл "for each" перебирает значения массива "sales"
-            if (t > averageSumm(sales)) { // проверяем больше ли значение "t" чем среднее значение продаж за все месяцы
+        int avrSum = averageSumm(sales); // высчитываем среднее значение ДО цикла
+        for (int gain : sales) { // цикл "for each" перебирает значения массива "sales"
+            if (gain > avrSum) { // проверяем больше ли значение "gain" чем среднее значение продаж за все месяцы
                 i++; // увеличиваем счетчик месяцев на 1
             }
         }
